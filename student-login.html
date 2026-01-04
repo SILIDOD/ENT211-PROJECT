@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login - LAUTECH SafeHouse</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container container">
+            <a href="index.html" class="nav-brand">
+                <i class="fas fa-shield-alt"></i>
+                <h1>LAUTECH SafeHouse</h1>
+            </a>
+            
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="student-register.html" class="nav-link">New Student? Register</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Login Form -->
+    <section class="section auth-section">
+        <div class="container">
+            <div class="auth-card">
+                <div class="auth-header">
+                    <h2><i class="fas fa-sign-in-alt"></i> Student Login</h2>
+                    <p>Access your secure accommodation dashboard</p>
+                </div>
+                
+                <form id="loginForm" class="auth-form">
+                    <div class="form-group">
+                        <label for="loginEmail">
+                            <i class="fas fa-envelope"></i> Email Address
+                        </label>
+                        <input type="email" id="loginEmail" placeholder="yourname@student.lautech.edu.ng" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="loginPassword">
+                            <i class="fas fa-lock"></i> Password
+                        </label>
+                        <div class="password-input">
+                            <input type="password" id="loginPassword" placeholder="Enter your password" required>
+                            <button type="button" class="password-toggle" id="toggleLoginPassword">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                        <div class="form-help">
+                            <a href="#" id="forgotPasswordLink">Forgot password?</a>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="rememberMe">
+                            <label for="rememberMe">Remember me on this device</label>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-block">
+                        <i class="fas fa-sign-in-alt"></i> Login to Dashboard
+                    </button>
+                    
+                    <div class="auth-divider">
+                        <span>or</span>
+                    </div>
+                    
+                    <a href="student-register.html" class="btn btn-outline btn-block">
+                        <i class="fas fa-user-plus"></i> Create New Account
+                    </a>
+                </form>
+                
+                <div class="auth-security">
+                    <i class="fas fa-shield-alt"></i>
+                    <p>Your login is secured with end-to-end encryption</p>
+                </div>
+                
+                <div class="auth-footer">
+                    <p>For security reasons, please:</p>
+                    <ul class="security-tips">
+                        <li>Use your LAUTECH email</li>
+                        <li>Never share your password</li>
+                        <li>Log out on shared devices</li>
+                        <li>Report suspicious activity</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Forgot Password Modal -->
+    <div id="forgotPasswordModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-key"></i> Reset Password</h3>
+                <span class="close" id="closeForgotPassword">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="forgotPasswordForm">
+                    <div class="form-group">
+                        <label for="resetEmail">LAUTECH Email Address</label>
+                        <input type="email" id="resetEmail" placeholder="Enter your registered email" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">
+                        Send Reset Link
+                    </button>
+                </form>
+                <p class="small-text">We'll send a password reset link to your LAUTECH email</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
