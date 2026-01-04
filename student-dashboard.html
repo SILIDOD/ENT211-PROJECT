@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - LAUTECH SafeHouse</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container container">
+            <a href="index.html" class="nav-brand">
+                <i class="fas fa-shield-alt"></i>
+                <h1>LAUTECH SafeHouse</h1>
+            </a>
+            
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <div class="nav-menu" id="navMenu">
+                <div class="dropdown">
+                    <button class="dropdown-toggle" id="dropdownToggle">
+                        <i class="fas fa-user-circle"></i>
+                        <span id="userName">Student</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="dropdown-menu" id="dropdownMenu">
+                        <a href="student-dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                        <a href="browse-accommodation.html"><i class="fas fa-search"></i> Find Housing</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Dashboard Layout -->
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="user-profile">
+                    <div class="user-avatar">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <div class="user-info">
+                        <h3 id="dashboardName">Student Name</h3>
+                        <p id="dashboardMatric">Matric: 2024/7040</p>
+                        <span class="badge verified-badge">
+                            <i class="fas fa-check-circle"></i> Verified
+                        </span>
+                    </div>
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <a href="student-dashboard.html" class="sidebar-link active">
+                    <i class="fas fa-tachometer-alt"></i> Dashboard
+                </a>
+                <a href="browse-accommodation.html" class="sidebar-link">
+                    <i class="fas fa-search"></i> Find Accommodation
+                </a>
+                <a href="#" class="sidebar-link">
+                    <i class="fas fa-bookmark"></i> Saved Listings
+                </a>
+                <a href="#" class="sidebar-link">
+                    <i class="fas fa-star"></i> My Reviews
+                </a>
+                <a href="#" class="sidebar-link">
+                    <i class="fas fa-user-cog"></i> Account Settings
+                </a>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <a href="#" class="btn-report">
+                    <i class="fas fa-flag"></i> Report Scam
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dashboard-content">
+            <div class="dashboard-header">
+                <h1>Welcome back, <span id="greetingName"></span>!</h1>
+                <p>Find safe accommodation for your academic journey</p>
+                
+                <div class="dashboard-actions">
+                    <a href="browse-accommodation.html" class="btn btn-primary">
+                        <i class="fas fa-search"></i> Find Accommodation
+                    </a>
+                    <a href="#" class="btn btn-outline">
+                        <i class="fas fa-bookmark"></i> View Saved
+                    </a>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>12</h3>
+                        <p>Viewed Listings</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-bookmark"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>5</h3>
+                        <p>Saved Properties</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-comment"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>3</h3>
+                        <p>Reviews Posted</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>100%</h3>
+                        <p>Verification Status</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="dashboard-section">
+                <h2><i class="fas fa-bolt"></i> Quick Actions</h2>
+                <div class="quick-actions">
+                    <a href="browse-accommodation.html" class="action-card">
+                        <i class="fas fa-search"></i>
+                        <h3>Find Housing</h3>
+                        <p>Browse verified accommodations</p>
+                    </a>
+                    <a href="verified-agents.html" class="action-card">
+                        <i class="fas fa-user-tie"></i>
+                        <h3>Verified Agents</h3>
+                        <p>Contact trusted agents</p>
+                    </a>
+                    <a href="#" class="action-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Safety Tips</h3>
+                        <p>Learn how to stay safe</p>
+                    </a>
+                    <a href="#" class="action-card">
+                        <i class="fas fa-flag"></i>
+                        <h3>Report Issue</h3>
+                        <p>Report scams or issues</p>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Recommended Listings -->
+            <div class="dashboard-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-home"></i> Recommended for You</h2>
+                    <a href="browse-accommodation.html" class="btn-link">View All <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="listings-mini">
+                    <div class="listing-mini-card">
+                        <div class="listing-mini-image"></div>
+                        <div class="listing-mini-content">
+                            <h3>Modern Self-Contain @ Under-G</h3>
+                            <p><i class="fas fa-map-marker-alt"></i> Under-G • 5 min to campus</p>
+                            <div class="listing-mini-footer">
+                                <span class="price">₦180,000/year</span>
+                                <a href="property-details.html" class="btn btn-sm btn-primary">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="listing-mini-card">
+                        <div class="listing-mini-image"></div>
+                        <div class="listing-mini-content">
+                            <h3>Cozy Room & Parlor @ Caretaker</h3>
+                            <p><i class="fas fa-map-marker-alt"></i> Caretaker • 8 min to campus</p>
+                            <div class="listing-mini-footer">
+                                <span class="price">₦250,000/year</span>
+                                <a href="property-details.html" class="btn btn-sm btn-primary">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2023 LAUTECH SafeHouse. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#"><i class="fas fa-shield-alt"></i> Security</a>
+                    <a href="#"><i class="fas fa-question-circle"></i> Help</a>
+                    <a href="#" id="footerLogout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
